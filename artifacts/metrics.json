@@ -1,0 +1,191 @@
+{
+  "classes": [
+    "ok",
+    "scratch",
+    "spot",
+    "crack"
+  ],
+  "test_size": 480,
+  "models": [
+    {
+      "name": "HOG + SVM (scikit-learn)",
+      "accuracy": 0.4583333333333333,
+      "macro_f1": 0.45708180348803173,
+      "train_seconds": 9.5
+    },
+    {
+      "name": "DefectNet CNN (PyTorch)",
+      "accuracy": 0.9729166666666667,
+      "macro_f1": 0.9730179194665833,
+      "train_seconds": 752.1
+    }
+  ],
+  "per_class": {
+    "ok": {
+      "precision": 0.9349593495934959,
+      "recall": 0.9583333333333334,
+      "f1-score": 0.9465020576131687,
+      "support": 120.0
+    },
+    "scratch": {
+      "precision": 0.9666666666666667,
+      "recall": 0.9666666666666667,
+      "f1-score": 0.9666666666666667,
+      "support": 120.0
+    },
+    "spot": {
+      "precision": 0.9914529914529915,
+      "recall": 0.9666666666666667,
+      "f1-score": 0.9789029535864979,
+      "support": 120.0
+    },
+    "crack": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 120.0
+    },
+    "accuracy": 0.9729166666666667,
+    "macro avg": {
+      "precision": 0.9732697519282885,
+      "recall": 0.9729166666666667,
+      "f1-score": 0.9730179194665833,
+      "support": 480.0
+    },
+    "weighted avg": {
+      "precision": 0.9732697519282885,
+      "recall": 0.9729166666666667,
+      "f1-score": 0.9730179194665833,
+      "support": 480.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      115,
+      4,
+      1,
+      0
+    ],
+    [
+      4,
+      116,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      116,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      120
+    ]
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0546,
+      "val_macro_f1": 0.1879
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7611,
+      "val_macro_f1": 0.7958
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5351,
+      "val_macro_f1": 0.4981
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4381,
+      "val_macro_f1": 0.3667
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3907,
+      "val_macro_f1": 0.8903
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3727,
+      "val_macro_f1": 0.9408
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3518,
+      "val_macro_f1": 0.5737
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3442,
+      "val_macro_f1": 0.9525
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3262,
+      "val_macro_f1": 0.9833
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3101,
+      "val_macro_f1": 0.958
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.2962,
+      "val_macro_f1": 0.7763
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.2994,
+      "val_macro_f1": 0.9958
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.2822,
+      "val_macro_f1": 0.9896
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.2881,
+      "val_macro_f1": 0.9747
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.277,
+      "val_macro_f1": 0.9667
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.2747,
+      "val_macro_f1": 0.9707
+    }
+  ],
+  "runtimes": [
+    {
+      "runtime": "PyTorch FP32",
+      "latency_ms": 10.46,
+      "size_mb": 1.2,
+      "accuracy": 0.9729
+    },
+    {
+      "runtime": "ONNX Runtime FP32",
+      "latency_ms": 4.72,
+      "size_mb": 1.18,
+      "accuracy": 0.9729
+    },
+    {
+      "runtime": "ONNX Runtime INT8",
+      "latency_ms": 3.77,
+      "size_mb": 0.32,
+      "accuracy": 0.9688
+    }
+  ],
+  "params": 294228
+}
